@@ -1,7 +1,7 @@
-# Name: BPI-M2-BERRY - OledSSD1306-Display control by using Python3
-# Author: BlackLeakz
-['Website: https://luxuzleakz.de'] (URL)
-# Github: ['https://github.com/blackleakz/BPI-M2-Berry_ssd1306-oled-control.git'] (URL)
+# Name: Raspberry Pi - OLED SSD1306 - Display Control by using Python3
+# Author: hexzhen3x7
+['https://blackzspace.de.de'] (blackzspace.de)
+# Github: ['https://github.com/raspberry-blackzspace-de/oledssd1306-gpio-control.git'] (GIT)
 # Version: 0.1a
 
 
@@ -46,7 +46,7 @@ sudo -H pip3 install luma.oled
 #4 - Now, try to scan for connected i2c-tools:
 
 ```
-i2cdetect -y -r 2
+i2cdetect -y 1
 ```
 
   4.1 - the ouput should be like this:
@@ -95,7 +95,3 @@ with canvas(device) as draw:
 </code>
 
 
-
-# Usefull links:
-
-['https://wiki.banana-pi.org/Banana_Pi_BPI-M2_Berry#Image_Release'] (Datasheet)

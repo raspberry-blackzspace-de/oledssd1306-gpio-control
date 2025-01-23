@@ -13,15 +13,16 @@ echo -e "For armbian-config navigate to System, the select Hardware and enable i
 
 echo -n "Installing now dependencys..."
 
-sudo apt-get install git python3-dev libffi-dev libssl-dev python3-pil libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libopenjp2-7 libtiff5 git make cmake build-essential python3-dev python*pip -y 
-python3 -m pip install --upgrade pip wheel setuptools
-python3 -m pip install Adafruit-SSD1306 Adafruit-BBIO psutil
-python3 -m pip install -r requirements.txt
-python3 -m pip install --upgrade pip wheel setuptools
-python3 -m pip install Adafruit-SSD1306 Adafruit-BBIO psutil
-python3 -m pip install -r requirements.txt
+sudo apt-get install git python3-dev i2c-tools libffi-dev libssl-dev python3-pil libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libopenjp2-7 libtiff5 git make cmake build-essential python3-dev python*pip -y 
+python3 -m pip install --upgrade pip wheel setuptools --break-system-packages
+python3 -m pip install Adafruit-SSD1306 Adafruit-BBIO psutil --break-system-packages 
+python3 -m pip install -r requirements.txt --break-system-packages
+sudo python3 -m pip install --upgrade pip wheel setuptools --break-system-packages
+sudo python3 -m pip install Adafruit-SSD1306 Adafruit-BBIO psutil --break-system-packages
+sudo python3 -m pip install -r requirements.txt --break-system-packages
 
-pip3 install luma-oled
+pip3 install luma-oled --break-system-packages
+sudo pip3 install luma-oled --break-system-packages
 
 cd ~
 mkdir tmp
@@ -32,10 +33,8 @@ sudo chmod a+x -R ./*
 $me=(whoami)
 sudo chown $me -hR /home/$me/tmp/luma*
 cd ~/tmp/luma*
-python3 setup.py install
-
-
-apt install i2c-tools
+sudo python3 setup.py install --break-system-packages
+python3 setup.py install --break-system-packages
 
 
 
