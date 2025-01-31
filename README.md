@@ -87,6 +87,8 @@ device = ssd1306(serial)
 
 </code>
 then you can call the modules.draw function by writin:
+```
+<```
 <code>
 
 with canvas(device) as draw:
@@ -95,5 +97,5 @@ with canvas(device) as draw:
 
 </code>
 
-
+```
 ```
