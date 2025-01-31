@@ -1,5 +1,0 @@
-wheel
-setuptools
-Adafruit-SSD1306
-Adafruit-BBIO
-psutil
